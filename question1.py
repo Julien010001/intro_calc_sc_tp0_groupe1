@@ -43,7 +43,7 @@ def plus_grands(x: list[T], k: int) -> list[T]:
         return []
     return sorted(x, reverse=True)[:k]
 
-#Réponses ax questions :
+#Réponses aux questions :
 """
 Que doit retourner plus_petit([[2], [33, 1], [1, 7]], 2)?
 -> [[1, 7], [2]]
@@ -64,4 +64,5 @@ def positifs_croissants(x: list[float]) -> list[float]:
     """
     Retourne les éléments >= 0 de x triés par ordre croissant.
     """
+
     return sorted(a for a in x if a >= 0)
