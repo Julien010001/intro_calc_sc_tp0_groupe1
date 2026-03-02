@@ -27,4 +27,20 @@ def nombre_racines(a: float) -> int:
         return 1
 
 
+if __name__ == "__main__":
+    # Affichage de f_a(x) pour différentes valeurs de a
 
+    a_values = [0.1, 0.25, 1/(2*np.log(2)), 1]
+    x = np.linspace(-10, 10, 500)
+    plt.figure(figsize=(10, 6))
+
+    for a in a_values:
+        y = f(a, x)
+        plt.plot(x, y, label=f"a = {a:.4f}")
+
+    plt.title("Courbes de f(a, x) pour différentes valeurs de a")
+    plt.xlabel("x")
+    plt.ylabel("f(a, x)")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
