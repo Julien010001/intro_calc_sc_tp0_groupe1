@@ -2,6 +2,10 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 def f(a, x):
+    """
+    Retourne f_a(x)
+    (a été utilisé pour visualiser la fonction avec matplotlib)
+    """
     return a * np.log((2*x)/(x+1)) - x/(2*x+1)
 
 def nombre_racines(a: float) -> int:
@@ -23,7 +27,4 @@ def nombre_racines(a: float) -> int:
         return 1
 
 
-if __name__ == "__main__":
-
-    print(abs(0.72134752 - 1/(2*np.log(2))) < 1e-8)
 
