@@ -1,9 +1,6 @@
 import pytest
 
-#executer "pytest" en cmd pour lancer les tests (ne prend pas en paramètre le nom du fichier)
-
-
-from question1 import plus_petits, plus_grands
+from question1 import plus_petits, plus_grands, positifs_croissants
 
 
 def test_plus_petits():
@@ -38,3 +35,9 @@ def test_sous_question_2():
         a.sort()
     # Comme y contient des références vers des sous-listes de x, x est modifié.
     assert x == [[2], [3, 2], [1, 3]]
+
+# test question 2
+
+def test_positifs_croissants():
+    assert positifs_croissants([]) == []
+    assert positifs_croissants([3, -1, 0, 5, -4, 2]) == [0, 2, 3, 5]
